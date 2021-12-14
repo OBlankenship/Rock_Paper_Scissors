@@ -1,0 +1,27 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.scores {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 10%;
+    margin-top: 5%;
+}
+
+#playerDiv, #computerDiv {
+    border-style: solid;
+    padding: 10%;
+    display: flex;
+    justify-content: flex-start;
+}
