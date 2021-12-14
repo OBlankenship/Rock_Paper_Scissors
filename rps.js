@@ -30,31 +30,32 @@ function getInput () {
 
 function playRound (userInput) {
     let computerInput = computerPlay();
+    let content = document.getElementById("notification")
     if (userInput === "PAPER" && computerInput === "ROCK") {
-        window.alert("You selected paper, and the computer selected rock!")
+        content.textContent = "You selected paper, and the computer selected rock!";
         return "PLAYER"
     }
     if (userInput === "PAPER" && computerInput === "SCISSORS") {
-        window.alert("You selected paper, and the computer selected scissors!")
+        content.textContent = "You selected paper, and the computer selected scissors!";
         return "COMPUTER"
     }
     if (userInput === "SCISSORS" && computerInput === "PAPER") {
-        window.alert("You selected scissors, and the computer selected paper!")
+        content.textContent = "You selected scissors, and the computer selected paper!"
         return "PLAYER"
     }
     if (userInput === "SCISSORS" && computerInput === "ROCK") {
-        window.alert("You selected scissors, and the computer selected rock!")
+        content.textContent = "You selected scissors, and the computer selected rock!"
         return "COMPUTER"
     }
     if (userInput === "ROCK" && computerInput === "PAPER") {
-        window.alert("You selected rock, and the computer selected paper!")
+        content.textContent = "You selected rock, and the computer selected paper!"
         return "COMPUTER"
     }
     if (userInput === "ROCK" && computerInput === "SCISSORS") {
-        window.alert("You selected rock, and the computer selected scissors!")
+        content.textContent = "You selected rock, and the computer selected scissors!"
         return "PLAYER"
     }
-
+    content.textContent = "Tie! Try again!"
     return "TIE"
 }
 
@@ -63,22 +64,13 @@ let computerScore = 0
 
 function keepScore(winner) {
     if (winner === "PLAYER") {
-        window.alert("Winner: Player")
-        playerScore += 1
         playerWin();
-        window.alert(`Player: ${playerScore} Computer: ${computerScore}`)
         
     }
     else if (winner === "COMPUTER") {
-        window.alert("Winner: Computer")
-        computerScore += 1
         computerWin();
-        window.alert(`Player: ${playerScore} Computer: ${computerScore}`)
     }
-    else {
-        window.alert("Tie! Try again!")
 
-    }
     if (playerScore === 5) {
         window.alert("Game Winner: Player")
     }
@@ -88,12 +80,14 @@ function keepScore(winner) {
 }
 
 function computerWin() {
+    computerScore += 1
     let computerDiv = document.getElementById("computerDiv")
     let content = document.getElementById("computerScore")
     content.textContent = `${computerScore}`;
 }
 
 function playerWin() {
+    playerScore += 1
     let playerDiv = document.getElementById("playerDiv")
     let content = document.getElementById("playerScore")
     content.textContent = `${playerScore}`;
