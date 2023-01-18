@@ -8,7 +8,7 @@ body {
     flex-direction: column;
     align-content: center;
     justify-content: center;
-    background-color: whitesmoke;
+    background-color: #444343;
 }
 
 .buttons {
@@ -18,14 +18,15 @@ body {
     padding-right: 10%;
     margin-bottom: 10%;
     flex-wrap: wrap;
-    background-color: whitesmoke;
+    background-color: #444343;
+    color: #d4cece;
 }
 
 .scores {
     display: flex;
     justify-content: space-between;
     padding: 10%;
-    background-color: #e6e6e6
+    background-color: #555252
 
 }
 
@@ -36,9 +37,11 @@ body {
 }
 
 button {
-    height: 20%;
+    height: 50%;
     width: 20%;
     border-radius: 50px;
+    font-size: 24px;
+    background-color: #d4cece;
 }
 
 #playerDiv, #computerDiv {
@@ -47,5 +50,6 @@ button {
     display: flex;
     justify-content: flex-start;
     border-radius: 50px;
-    background-color:  #cccccc
+    font-size: 24px;
+    background-color:  #d4cece
 }
